@@ -16,3 +16,6 @@ typer = "^0.12.3"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aoc = "aoc.main:app"

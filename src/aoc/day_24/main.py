@@ -1,1 +1,6 @@
-raise NotImplementedError("This day has not been implmented yet.")
+from pathlib import Path
+from typing import Optional
+
+
+def run(input: Optional[Path]):
+    print("Day is not implemented yet.")
