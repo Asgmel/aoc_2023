@@ -11,7 +11,7 @@ day_modules = []
 
 for i in range(1, 25):
     module_name = f"day_0{i}" if i < 10 else f"day_{i}"
-    day_modules.append(importlib.import_module(f"aoc.{module_name}.main"))
+    day_modules.append(importlib.import_module(f"aoc.days.{module_name}.main"))
 
 app = typer.Typer()
 
