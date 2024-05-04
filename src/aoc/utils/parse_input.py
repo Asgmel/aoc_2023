@@ -5,8 +5,8 @@ from typing import Optional
 import aoc
 
 
-def get_input_to_use(input: Optional[Path], day: int) -> Path:
-    return input if input else get_input_path_from_day(day=day)
+def get_input_to_use(input_path: Optional[Path], day: int) -> Path:
+    return input_path if input_path else get_input_path_from_day(day=day)
 
 
 def get_input_path_from_day(day: int) -> Path:
@@ -20,13 +20,13 @@ def get_input_path_from_day(day: int) -> Path:
     return root_module_file_path / f"days/{folder_name}/input.txt"
 
 
-def read_input_as_string(input: Path) -> str:
-    with open(input, "r", encoding="utf-8") as file:
+def read_input_as_string(input_path: Path) -> str:
+    with open(input_path, "r", encoding="utf-8") as file:
         file_contents = file.read()
 
     return file_contents
 
 
-def read_input_as_list_of_strings(input: Path) -> list[str]:
-    string_input = read_input_as_string(input=input)
+def read_input_as_list_of_strings(input_path: Path) -> list[str]:
+    string_input = read_input_as_string(input_path=input_path)
     return string_input.split("\n")

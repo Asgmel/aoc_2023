@@ -24,12 +24,12 @@ def run(
             min=1, max=24, help="Day of AOC to run. Must be between 1 and 24."
         ),
     ],
-    input: Annotated[
+    input_path: Annotated[
         Optional[Path],
         typer.Option(help="Path to the file with the input data."),
     ] = None,
 ):
-    day_modules[day - 1].run(input=input)
+    day_modules[day - 1].run(input_path=input_path)
 
 
 @app.command()
