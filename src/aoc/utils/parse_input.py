@@ -30,3 +30,8 @@ def read_input_as_string(input_path: Path) -> str:
 def read_input_as_list_of_strings(input_path: Path) -> list[str]:
     string_input = read_input_as_string(input_path=input_path)
     return string_input.split("\n")
+
+
+def read_input_as_two_dimensional_array(input_path: Path) -> list[list[str]]:
+    string_input = read_input_as_string(input_path=input_path)
+    return [list(row) for row in string_input.split("\n")]
